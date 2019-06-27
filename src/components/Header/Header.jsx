@@ -11,7 +11,7 @@ class Header extends Component {
                 <div className="container">
                 <div className="intro-text">
                     <div className="intro-heading text-uppercase">Collecter des fonds <br /> n'a jamais été aussi facile</div>
-                    <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Dites moi plus</a>
+                    <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#aboutUs">Dites moi plus</a>
                 </div>
                 </div>
             </header>

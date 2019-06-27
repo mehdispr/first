@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Demande from './Demande';
 
-class Top5 extends Component {
+class Top6 extends Component {
     
     constructor(props){
         super(props);
@@ -22,6 +22,9 @@ class Top5 extends Component {
             {
                 titre : `${proj.titre}`,
                 projet_id : `${proj.projet_id}`,
+                montant : `${proj.montant}` ,
+                categorie : `${proj.categorie}` ,
+                restant : `${proj.restant}` 
             }
             )))
         .then(projects => this.setState({
@@ -34,10 +37,13 @@ class Top5 extends Component {
     render() { 
         return ( 
             <div class='content'>
-               <Demande/>
+                {
+                    this.state.projects.map(proj => <Demande titre={proj.titre} id={proj.projet_id} imgUrl="https://picsum.photos/540/360" montant={proj.montant} restant={proj.restant}  cat={proj.categorie}/>)
+                    
+                }
             </div>
          );
     }
 }
  
-export default Top5;
+export default Top6;

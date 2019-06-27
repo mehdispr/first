@@ -4,7 +4,7 @@ class Nav extends Component {
     render() { 
         return (  
             <nav className="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-                <div className="container">
+                <div className="container colored-nav">
                 <a className="navbar-brand js-scroll-trigger" style={{fontFamily:'The Sunset',fontWeight:'700'}}href="#page-top">Sanad</a>
                 <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -16,10 +16,10 @@ class Nav extends Component {
                         <a className="nav-link js-scroll-trigger" href="#topDemandes">Top 5</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link js-scroll-trigger" href="#portfolio">Nouvelle demande</a>
+                        <a className="nav-link js-scroll-trigger" href="#newIn">Nouvelle demande</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link js-scroll-trigger" href="#about">A propos</a>
+                        <a className="nav-link js-scroll-trigger" href="#aboutUs">A propos</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link js-scroll-trigger" href="#contact">Contact</a>

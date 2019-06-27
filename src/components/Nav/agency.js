@@ -5,7 +5,7 @@ import jQuery from 'jquery';
 
   // Smooth scrolling using jQuery easing
 
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
+  $(document).on('click','a.js-scroll-trigger[href*="#"]:not([href="#"])',function() {
     if (window.location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && window.location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
@@ -19,7 +19,7 @@ import jQuery from 'jquery';
   });
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
+  $(document).on('click','.js-scroll-trigger',function() {
     $('.navbar-collapse').collapse('hide');
   });
 
@@ -40,6 +40,6 @@ import jQuery from 'jquery';
   // Collapse now if page is not at top
   navbarCollapse();
   // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
+  $(document).on('scroll',navbarCollapse);
 
 })(jQuery); // End of use strict

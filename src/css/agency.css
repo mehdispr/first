@@ -110,8 +110,12 @@ img::-moz-selection {
 
 #mainNav {
   background-color: #212529;
+  width: 100vw;
 }
-
+.colored-nav{
+  background-color: #21252980;
+  width: 100vw;
+}
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;
@@ -162,12 +166,12 @@ img::-moz-selection {
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 1.1em 1em !important;
   }
-  #mainNav.navbar-shrink {
+  #mainNav .navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
     background-color: #212529;
   }
-  #mainNav.navbar-shrink .navbar-brand {
+  #mainNav .navbar-shrink .navbar-brand {
     font-size: 1.25em;
     padding: 12px 0;
   }
