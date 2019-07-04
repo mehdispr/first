@@ -5,7 +5,7 @@ class Demande extends Component {
 
     render() { 
         return (
-            <div className="grid">
+            <div className="grid" key={this.props.id}>
                 <figure className="effect-sadie">
                     <img src={this.props.imgUrl} alt="img02" />
                     <figcaption>

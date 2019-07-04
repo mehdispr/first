@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     
     styles={
-        backgroundImage : '../../img/header-bg-3.jpg'
+        backgroundImage : '../../img/header-bg-1.jpg'
     }
     render() { 
         return (  

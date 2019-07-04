@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from '../../Header/Header';
 import Nav from "../../Nav/Nav";
-import Top5 from '../../Top5/Top5';
+import Top5 from '../../Top5/Top6';
 import NewIn from '../../newProj/NewIn';
 import Contact from '../../Contact/Contact';
 import Footer from "../../Footer/Footer";

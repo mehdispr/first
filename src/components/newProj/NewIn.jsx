@@ -36,7 +36,7 @@ class NewIn extends Component {
 
     render() { 
         return ( 
-            <div class='content'>
+            <div className='content'>
                 {
                    this.state.projects.map(proj => <Demande titre={proj.titre} id={proj.projet_id} imgUrl="https://picsum.photos/640/360" montant={proj.montant} restant={proj.restant}  cat={proj.categorie}/>)
                     
