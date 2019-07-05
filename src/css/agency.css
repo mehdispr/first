@@ -139,6 +139,9 @@ img::-moz-selection {
   background-color: #21252980;
   width: 100vw;
 }
+.left{
+  left: 0;
+}
 #mainNav .navbar-toggler {
   font-size: 12px;
   right: 0;

@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Demande from './Demande';
+import React, { Component, Fragment } from 'react';
+import Demande from '../Demande/Demande';
+import './effect.css';
 
 class Top6 extends Component {
     
@@ -11,6 +12,11 @@ class Top6 extends Component {
         }
     }
 
+     refresh = () => {
+          
+        window.location.replace("/search")
+        
+    }
     componentDidMount(){
         this.fetchData();
     }
@@ -23,8 +29,11 @@ class Top6 extends Component {
                 titre : `${proj.titre}`,
                 projet_id : `${proj.projet_id}`,
                 montant : `${proj.montant}` ,
-                categorie : `${proj.categorie}` ,
-                restant : `${proj.restant}` 
+                restant : `${proj.restant}` ,
+                description : proj.description,
+                date_fin : proj.date_fin,
+                prR : (((proj.montant - proj.restant)/proj.montant)*100),
+                img : "https://picsum.photos/640/360"
             }
             )))
         .then(projects => this.setState({
@@ -36,12 +45,17 @@ class Top6 extends Component {
 
     render() { 
         return ( 
+            <Fragment>
             <div className='content'>
                 {
-                    this.state.projects.map(proj => <Demande titre={proj.titre} id={proj.projet_id} imgUrl="https://picsum.photos/540/360" montant={proj.montant} restant={proj.restant}  cat={proj.categorie}/>)
+                    this.state.projects.map(proj => <Demande titre={proj.titre} key={proj.projet_id} id={proj.projet_id} img={proj.img} montant={proj.montant} restant={proj.prR} description={proj.description}/>)
                     
                 }
             </div>
+            <div className='float-right col-3 mt-3'>
+                <button className="btn btn-primary text-uppercase p-3" onClick={this.refresh}>Afficher plus</button>
+            </div>
+            </Fragment>
          );
     }
 }

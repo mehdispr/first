@@ -22,7 +22,8 @@ class AboutUs extends Component {
                         </div>
                         </div>
                         <div className='text-center'>
-                        <button className="btn btn-primary text-uppercase p-3 " >Essayer Saver</button>
+                            <button className="btn btn-primary text-uppercase p-3 " >Essayer Saver</button>
+                            {/* <Modal /> */}
                         </div>
                     </div>
                     </section>
